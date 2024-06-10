@@ -62,6 +62,7 @@ export class TableComponent {
     },
   ];
 
+  // TODO: Implement this method so that it displays a modal with the book details
   displayModal(id: number) {
     console.log(`Displaying modal for book with id: ${id}`);
 
