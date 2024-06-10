@@ -1,0 +1,9 @@
+<mat-form-field class="example-form-field w-full mr-auto">
+  <mat-label>Find a book</mat-label>
+  <input matInput type="text" [(ngModel)]="value" />
+  @if (value) {
+  <button matSuffix mat-icon-button aria-label="Clear" (click)="value = ''">
+    <mat-icon>close</mat-icon>
+  </button>
+  }
+</mat-form-field>
