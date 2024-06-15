@@ -1,9 +1,13 @@
 <mat-form-field>
   <mat-label>Sort By</mat-label>
-  <mat-select [(value)]="selected">
-    <mat-option>None</mat-option>
-    @for (option of options; track $index) {
-    <mat-option [value]="option">{{ option }}</mat-option>
-    }
+  <mat-select
+    [(value)]="selected"
+    (selectionChange)="onFilterChange($event.value)"
+  >
+    <mat-option [value]="''">None</mat-option>
+    @for (option of options; track $index) {<mat-option [value]="option">{{
+      option
+    }}</mat-option
+    >}
   </mat-select>
 </mat-form-field>

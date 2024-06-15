@@ -1,9 +1,9 @@
 <div class="flex flex-col max-w-[1500px] items-center mx-auto">
   <app-header />
-  <app-add-book class="mr-auto mb-2" />
+  <app-add-book class="mr-auto mb-2" [isModalOpen]="isModalOpen" />
   <div class="flex justify-around flex-row items-center w-full">
     <app-filters />
     <app-search class="flex-grow ml-2" />
   </div>
-  <app-table class="w-full" />
+  <app-table class="w-full" [isModalOpen]="isModalOpen" />
 </div>

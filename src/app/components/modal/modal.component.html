@@ -1,15 +1,12 @@
-<div class="card card-side bg-base-100 shadow-xl">
-  <figure>
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
-      alt="Movie"
-    />
-  </figure>
-  <div class="card-body">
-    <h2 class="card-title">New movie is released!</h2>
-    <p>Click the button to watch on Jetflix app.</p>
-    <div class="card-actions justify-end">
-      <button class="btn btn-primary">Watch</button>
-    </div>
+<div mat-dialog-content class="w-[400px] p-10">
+  <h1 mat-dialog-title>{{ data.title }}</h1>
+  <p><strong>Position:</strong> {{ data.position }}</p>
+  <p><strong>Title:</strong> {{ data.title }}</p>
+  <p><strong>Author:</strong> {{ data.author }}</p>
+  <p><strong>Genre:</strong> {{ data.Genre }}</p>
+  <p><strong>Loan Date:</strong> {{ data.loanDate }}</p>
+  <p><strong>Return Date:</strong> {{ data.returnDate }}</p>
+  <div mat-dialog-actions class="pt-2">
+    <button mat-button mat-dialog-close>Close</button>
   </div>
 </div>

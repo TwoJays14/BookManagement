@@ -1,0 +1,50 @@
+<div mat-dialog-content class="w-[500px] p-10">
+  <h1 mat-dialog-title class="text-center">Add New Book</h1>
+  <form
+    [formGroup]="bookForm"
+    (ngSubmit)="onSubmit()"
+    class="flex flex-col justify-center items-center"
+  >
+    <mat-form-field class="w-10/12">
+      <mat-label>ID</mat-label>
+      <input matInput formControlName="id" type="number" />
+    </mat-form-field>
+
+    <mat-form-field class="w-10/12">
+      <mat-label>Position</mat-label>
+      <input matInput formControlName="position" type="number" />
+    </mat-form-field>
+
+    <mat-form-field class="w-10/12">
+      <mat-label>Title</mat-label>
+      <input matInput formControlName="title" />
+    </mat-form-field>
+
+    <mat-form-field class="w-10/12">
+      <mat-label>Author</mat-label>
+      <input matInput formControlName="author" />
+    </mat-form-field>
+
+    <mat-form-field class="w-10/12">
+      <mat-label>Genre</mat-label>
+      <input matInput formControlName="Genre" />
+    </mat-form-field>
+
+    <mat-form-field class="w-10/12">
+      <mat-label>Loan Date</mat-label>
+      <input matInput formControlName="loanDate" type="date" />
+    </mat-form-field>
+
+    <mat-form-field class="w-10/12">
+      <mat-label>Return Date</mat-label>
+      <input matInput formControlName="returnDate" type="date" />
+    </mat-form-field>
+
+    <div mat-dialog-actions class="flex justify-end gap-2">
+      <button mat-button (click)="onCancel()">Cancel</button>
+      <button mat-button type="submit" [disabled]="bookForm.invalid">
+        Add
+      </button>
+    </div>
+  </form>
+</div>
